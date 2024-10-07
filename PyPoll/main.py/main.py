@@ -1,5 +1,5 @@
 import csv
-
+import os
 # File paths
 input_file = 'election_data.csv'
 output_file = 'PyPoll_Analysis.txt'
@@ -8,8 +8,11 @@ output_file = 'PyPoll_Analysis.txt'
 total_votes = 0
 candidates = {}
 
+file_path = os.path.join("..", "Resources", "election_data.csv")
+with open(file_path) as csvfile:
+
 # Read the CSV file
-with open('C:\\Users\\aslat\\Homework\\python-challenge\\PyPoll\\Resources\\election_data.csv', mode='r') as csvfile:
+
     csvreader = csv.reader(csvfile)
     header = next(csvreader)  # Skip header
 

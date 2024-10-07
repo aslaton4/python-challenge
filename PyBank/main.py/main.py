@@ -9,7 +9,8 @@ dates = []
 greatest_increase = ['', 0]
 greatest_decrease = ['', 0]
 # Open and read the CSV file
-with open('C:\\Users\\aslat\\Homework\\python-challenge\\PyBank\\Resources\\budget_data.csv', mode='r') as file:
+file_path = os.path.join("..", "Resources", "budget_data.csv")
+with open(file_path) as file:
     csvreader = csv.reader(file)
     next(csvreader)  # Skip the header row
     # Process each row in the CSV
